@@ -1,0 +1,31 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include<map>
+using namespace std;
+
+
+int main() {
+    std::map<string,long> m;
+    string name;
+    long number;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>name;
+        cin>>number;
+        m[name]=number;
+    }
+    while(cin>>name){
+        if(m.find(name)!=m.end())
+        {
+            cout<<name<<"="<<m.find(name)->second<<endl;
+        }
+        else 
+        cout<<"Not found"<<endl;
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
